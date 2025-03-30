@@ -10,29 +10,24 @@ Analysis Queries
 Here are some example queries used for analysis:
 
 Top-selling tracks:
-sql
-Copy
-Edit
 SELECT Track.Name, SUM(Invoice_Line.Quantity) AS TotalSales
 FROM Invoice_Line
 JOIN Track ON Invoice_Line.Track_Id = Track.Track_Id
 GROUP BY Track.Name
 ORDER BY TotalSales DESC
 LIMIT 10;
+
+
 Revenue by genre:
-sql
-Copy
-Edit
 SELECT Genre.Name, SUM(Invoice_Line.Unit_Price * Invoice_Line.Quantity) AS Revenue
 FROM Invoice_Line
 JOIN Track ON Invoice_Line.Track_Id = Track.Track_Id
 JOIN Genre ON Track.Genre_Id = Genre.Genre_Id
 GROUP BY Genre.Name
 ORDER BY Revenue DESC;
+
+
 Employee sales performance:
-sql
-Copy
-Edit
 SELECT 
  Employee.First_Name, 
  Employee.Last_Name, 
@@ -42,17 +37,13 @@ JOIN Customer ON Invoice.customer_id = Customer.customer_id
 JOIN Employee ON CAST(Customer.support_rep_id AS INTEGER) = CAST(Employee.employee_id AS INTEGER)
 GROUP BY Employee.First_Name, Employee.Last_Name
 ORDER BY TotalSales DESC;
+
+
 How to Use
 Clone the repository:
-
-bash
-Copy
-Edit
 git clone <repository_url>
 Import the schema and data files into your PostgreSQL or MySQL database.
-
 Run the queries from queries.sql to perform the analysis.
-
 Tools Used
 Database Management: PostgreSQL
 
@@ -64,4 +55,3 @@ For any questions or suggestions, feel free to reach out:
 Name: Vaibhav Anand
 
 Email: anandvaibhav02@gmail.com
-
