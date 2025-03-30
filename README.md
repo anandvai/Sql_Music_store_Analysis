@@ -31,7 +31,7 @@ GROUP BY Track.Name
 ORDER BY TotalSales DESC
 LIMIT 10;
 
- ###  Revenue by Genre
+  Revenue by Genre
  SELECT Genre.Name, SUM(Invoice_Line.Unit_Price * Invoice_Line.Quantity) AS Revenue
 FROM Invoice_Line
 JOIN Track ON Invoice_Line.Track_Id = Track.Track_Id
@@ -40,7 +40,7 @@ GROUP BY Genre.Name
 ORDER BY Revenue DESC;
 
 
-###🔹 Employee Sales Performance
+🔹 Employee Sales Performance
 SELECT 
  Employee.First_Name, 
  Employee.Last_Name, 
@@ -63,5 +63,5 @@ For any questions or suggestions, feel free to reach out:
 
 👤 Name: Vaibhav Anand
 📧 Email: anandvaibhav02@gmail.com
-🔗 GitHub: github.com/<your-github-username>
+
 
