@@ -9,6 +9,8 @@ This project, **Music Store Data Analysis**, focuses on extracting valuable insi
 - **Tracks & Artists** – Best-selling songs and popular artists  
 - **Genres & Playlists** – Music trends and customer preferences  
 
+![image](https://github.com/user-attachments/assets/b33d62e4-8f15-46ae-b763-df09aaa4a2c5)
+
 Using **SQL queries**, we analyze various aspects of the store’s operations.  
 
 ---
